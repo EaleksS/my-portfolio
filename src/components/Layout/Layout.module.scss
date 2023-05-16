@@ -1,0 +1,10 @@
+@import "/src/App.scss";
+
+body {
+  background-color: $bg-color;
+}
+
+.layout {
+  max-width: $max-width;
+  margin: 0 auto;
+}

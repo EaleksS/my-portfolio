@@ -1,0 +1,43 @@
+@import "/src/App.scss";
+
+.p {
+  color: $gray;
+
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: 2rem;
+
+  line-height: 3rem;
+
+  span {
+    color: $primary;
+  }
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.h3 {
+  font-weight: 500;
+  font-size: 1rem;
+
+  span {
+    color: $gray;
+  }
+}
+
+.h4 {
+  font-weight: 600;
+  font-size: 1rem;
+
+  span {
+    color: $gray;
+  }
+}
