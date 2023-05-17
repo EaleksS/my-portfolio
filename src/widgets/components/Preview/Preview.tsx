@@ -7,8 +7,8 @@ export const Preview: FC = (): JSX.Element => {
     <div className={styles.preview}>
       <div className={styles.text}>
         <Text type="h1">
-          Elias is a <span>web designer</span> and
-          <span> front-end developer</span>
+          Elias is a <span style={{ animation: "none" }}>web designer</span> and
+          <span style={{ animation: "none" }}> front-end developer</span>
         </Text>
 
         <Text mt="2rem">

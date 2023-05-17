@@ -1,6 +1,5 @@
 @import "/src/app/styles/variables";
 
-
 .p {
   color: $gray;
 
@@ -17,6 +16,7 @@
 
   span {
     color: $primary;
+    animation: glowing 1300ms infinite;
   }
 }
 
@@ -40,5 +40,17 @@
 
   span {
     color: $gray;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    color: rgba($color: $primary, $alpha: 1);
+  }
+  50% {
+    color: rgba($color: $primary, $alpha: 0.5);
+  }
+  100% {
+    color: rgba($color: $primary, $alpha: 1);
   }
 }
