@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   .content {
     position: relative;
     border: 1px solid $gray;

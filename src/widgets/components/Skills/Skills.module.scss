@@ -16,8 +16,16 @@
     grid-template-columns: 1fr 1.5fr;
     gap: 1rem;
 
+    @media (max-width: 1024px) {
+      display: block;
+    }
+
     .ill {
       position: relative;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
 
       .dots1 {
         position: absolute;
@@ -76,6 +84,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1rem;
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
 
       .items {
         display: flex;

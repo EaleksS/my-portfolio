@@ -4,6 +4,7 @@ import styles from "./Button.module.scss";
 interface Props {
   type?: "default" | "primary";
   children: ReactNode;
+  onClick?: (handleClick?: (arg?: ReactNode) => void) => void;
   mt?: string;
 }
 
@@ -11,6 +12,7 @@ export const Button: FC<Props> = ({
   type = "default",
   children,
   mt = "0",
+  onClick = () => "",
 }): JSX.Element => {
   switch (type) {
     case "primary":
@@ -18,6 +20,7 @@ export const Button: FC<Props> = ({
         <button
           className={`${styles.btn} ${styles.primary}`}
           style={{ marginTop: mt }}
+          onClick={() => onClick()}
         >
           {children}
         </button>
@@ -28,6 +31,7 @@ export const Button: FC<Props> = ({
         <button
           className={`${styles.btn} ${styles.default}`}
           style={{ marginTop: mt }}
+          onClick={() => onClick()}
         >
           {children}
         </button>

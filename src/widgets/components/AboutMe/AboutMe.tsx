@@ -1,12 +1,15 @@
 import { FC } from "react";
 import styles from "./AboutMe.module.scss";
 import { Button, Text } from "../../../shared";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   type?: 1 | 2;
 }
 
 export const AboutMe: FC<Props> = ({ type = 1 }): JSX.Element => {
+  const navigate = useNavigate();
+
   switch (type) {
     case 2:
       return (
@@ -63,7 +66,11 @@ export const AboutMe: FC<Props> = ({ type = 1 }): JSX.Element => {
                 clients to establish their presence online. I always strive to
                 learn about the newest technologies and frameworks.
               </Text>
-              <Button type="primary" mt="1.5rem">
+              <Button
+                type="primary"
+                mt="1.5rem"
+                onClick={() => navigate("/about-me")}
+              >
                 Read more {`->`}
               </Button>
             </div>
