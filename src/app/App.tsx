@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 import "./styles/_variables.scss";
-import { Main } from "../pages/Main/Main";
-import { Router } from "./providers/Router";
+import { Routing } from "./providers/Routing";
+import { routes } from "../pages";
 import "./styles/reset.min.css";
 
-function App() {
+export const App = () => {
   return (
-    <Router>
+    <Routing>
       <Routes>
-        <Route path="/" element={<Main />} />
+        {routes.map((e) => (
+          <Route {...e} />
+        ))}
       </Routes>
-    </Router>
+    </Routing>
   );
-}
-
-export default App;
+};

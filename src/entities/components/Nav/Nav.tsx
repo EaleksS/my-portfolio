@@ -7,6 +7,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 export const Nav: FC = (): JSX.Element => {
   const navigate = useNavigate();
 
+  const pageUrl = window.location.pathname;
+
   const [isActive, setIsActive] = useState<boolean>(false);
 
   // Закрытие по нажатию на документ, если нету stopPropagation()
@@ -15,16 +17,28 @@ export const Nav: FC = (): JSX.Element => {
   return (
     <nav className={styles.nav}>
       <ul>
-        <li className={styles.active} onClick={() => navigate("/")}>
+        <li
+          className={`${pageUrl === "/" && styles.active}`}
+          onClick={() => navigate("/")}
+        >
           <span>#</span>home
         </li>
-        <li onClick={() => navigate("/works")}>
+        <li
+          className={`${pageUrl === "/works" && styles.active}`}
+          onClick={() => navigate("/works")}
+        >
           <span>#</span>works
         </li>
-        <li onClick={() => navigate("/about-me")}>
+        <li
+          className={`${pageUrl === "/about-me" && styles.active}`}
+          onClick={() => navigate("/about-me")}
+        >
           <span>#</span>about-me
         </li>
-        <li onClick={() => navigate("/contacts")}>
+        <li
+          className={`${pageUrl === "/contacts" && styles.active}`}
+          onClick={() => navigate("/contacts")}
+        >
           <span>#</span>contacts
         </li>
         <ol

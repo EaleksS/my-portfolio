@@ -1,0 +1,10 @@
+.complete_apps {
+  margin-top: 3rem;
+
+  .projects {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}

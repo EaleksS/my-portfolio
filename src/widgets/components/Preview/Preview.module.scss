@@ -4,6 +4,9 @@
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 20px;
+  // height: calc(100vh - 80px);
+  align-items: center;
+  margin-top: 10rem;
 
   .text {
     transform: translateY(4.5rem);

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import styles from "./Main.module.scss";
 import {
   Layout,
   Skills,
@@ -13,14 +12,12 @@ import {
 export const Main: FC = (): JSX.Element => {
   return (
     <Layout>
-      <div className={styles.main}>
-        <Preview />
-        <Quote />
-        <Projects />
-        <Skills />
-        <AboutMe />
-        <Contacts />
-      </div>
+      <Preview />
+      <Quote />
+      <Projects />
+      <Skills />
+      <AboutMe />
+      <Contacts />
     </Layout>
   );
 };

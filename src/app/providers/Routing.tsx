@@ -5,6 +5,6 @@ interface Props {
   children: ReactNode;
 }
 
-export const Router: FC<Props> = ({ children }): JSX.Element => {
+export const Routing: FC<Props> = ({ children }): JSX.Element => {
   return <BrowserRouter>{children}</BrowserRouter>;
 };
