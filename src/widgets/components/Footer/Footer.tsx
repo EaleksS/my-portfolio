@@ -16,7 +16,7 @@ export const Footer: FC = (): JSX.Element => {
         <div className={styles.logo} onClick={() => navigate("/")}>
           <Text type="h3">
             <img src="/Logo.svg" alt="logo" />
-            Elias
+            Ernest
           </Text>
           <Text>{t("Web")}</Text>
         </div>
@@ -29,7 +29,7 @@ export const Footer: FC = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <Text>© Copyright 2023. Made by Elias</Text>
+        <Text>© Copyright 2023. Made by Ernest</Text>
       </div>
     </footer>
   );

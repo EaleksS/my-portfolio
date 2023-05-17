@@ -10,7 +10,7 @@ export const Preview: FC = (): JSX.Element => {
     <div className={styles.preview}>
       <div className={styles.text}>
         <Text type="h1">
-          {/* Elias is a <span style={{ animation: "none" }}>web designer</span> and
+          {/* Ernest is a <span style={{ animation: "none" }}>web designer</span> and
           <span style={{ animation: "none" }}> front-end developer</span> */}
           {t("Ptitle").split("|")[0]}
           <span>{t("Ptitle").split("|")[1]}</span>
