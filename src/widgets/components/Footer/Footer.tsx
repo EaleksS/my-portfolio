@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styles from "./Footer.module.scss";
-import { Text } from "../UI/Text/Text";
 import { BsGithub, BsDiscord } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { Text } from "../../../shared";
 
 export const Footer: FC = (): JSX.Element => {
   const navigate = useNavigate();

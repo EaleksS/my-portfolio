@@ -1,0 +1,52 @@
+@import "/src/app/styles/variables";
+
+.about_me {
+  margin-top: 8rem;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .text {
+      margin-top: 1.5rem;
+    }
+
+    .img {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      img {
+        border-bottom: 1px solid $primary;
+        transform: translateX(5.3rem);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4rem;
+        transform: translateX(-3rem);
+        width: 84px;
+        height: 84px;
+        background-image: url("/Dots.svg");
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 10rem;
+        right: 1rem;
+        width: 84px;
+        height: 60px;
+        background-image: url("/Dots.svg");
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+    }
+  }
+}

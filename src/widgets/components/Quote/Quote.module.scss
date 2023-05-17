@@ -1,0 +1,50 @@
+@import "/src/app/styles/variables";
+
+.quote {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    position: relative;
+    border: 1px solid $gray;
+    width: 44rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: ",,";
+      position: absolute;
+      top: -0.5rem;
+      left: 2rem;
+      background: $bg-color;
+      font-size: 3rem;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      content: ",,";
+      position: absolute;
+      bottom: -2.5rem;
+      right: 2rem;
+      background: $bg-color;
+      font-size: 3rem;
+      transform: rotate(180deg);
+    }
+
+    .dr {
+      position: absolute;
+      bottom: -4.1rem;
+      right: -0.02rem;
+      height: 4rem;
+      width: 10rem;
+      border: 1px solid $gray;
+      border-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
