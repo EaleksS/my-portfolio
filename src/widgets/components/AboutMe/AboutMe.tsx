@@ -2,6 +2,7 @@ import { FC } from "react";
 import styles from "./AboutMe.module.scss";
 import { Button, Text } from "../../../shared";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   type?: 1 | 2;
@@ -9,32 +10,29 @@ interface Props {
 
 export const AboutMe: FC<Props> = ({ type = 1 }): JSX.Element => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   switch (type) {
     case 2:
       return (
         <div className={styles.about_me}>
           <Text type="h1">
-            <span>/</span>about-me
+            <span>/</span>
+            {t("about-me")}
           </Text>
           <Text mt="1rem">
-            <span style={{ color: "#fff" }}>Who am i?</span>
+            <span style={{ color: "#fff" }}>{t("Who_am")}</span>
           </Text>
           <div className={styles.content}>
             <div className={styles.text}>
               <Text mt="5rem">
-                Hello, i’m Elias!
+                {t("hello")}
                 <br />
                 <br />
-                I’m a self-taught front-end developer based in Kyiv, Ukraine. I
-                can develop responsive websites from scratch and raise them into
-                modern user-friendly web experiences.
+                {t("develop_responsive_websites")}
                 <br />
                 <br />
-                Transforming my creativity and knowledge into a websites has
-                been my passion for over a year. I have been helping various
-                clients to establish their presence online. I always strive to
-                learn about the newest technologies and frameworks.
+                {t("Transforming_my_creativity")}
               </Text>
             </div>
             <div className={styles.img}>
@@ -48,30 +46,26 @@ export const AboutMe: FC<Props> = ({ type = 1 }): JSX.Element => {
       return (
         <div className={styles.about_me}>
           <Text type="h1">
-            <span>#</span>about-me
+            <span>#</span>
+            {t("about-me")}
           </Text>
           <div className={styles.content}>
             <div className={styles.text}>
               <Text>
-                Hello, i’m Elias!
+                {t("hello")}
                 <br />
                 <br />
-                I’m a self-taught front-end developer based in Kyiv, Ukraine. I
-                can develop responsive websites from scratch and raise them into
-                modern user-friendly web experiences.
+                {t("develop_responsive_websites")}
                 <br />
                 <br />
-                Transforming my creativity and knowledge into a websites has
-                been my passion for over a year. I have been helping various
-                clients to establish their presence online. I always strive to
-                learn about the newest technologies and frameworks.
+                {t("Transforming_my_creativity")}
               </Text>
               <Button
                 type="primary"
                 mt="1.5rem"
                 onClick={() => navigate("/about-me")}
               >
-                Read more {`->`}
+                {t("read_more")} {`->`}
               </Button>
             </div>
             <div className={styles.img}>

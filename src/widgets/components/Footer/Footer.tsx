@@ -3,9 +3,11 @@ import styles from "./Footer.module.scss";
 import { BsGithub, BsDiscord } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { Text } from "../../../shared";
+import { useTranslation } from "react-i18next";
 
 export const Footer: FC = (): JSX.Element => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <footer className={styles.footer}>
@@ -16,10 +18,10 @@ export const Footer: FC = (): JSX.Element => {
             <img src="/Logo.svg" alt="logo" />
             Elias
           </Text>
-          <Text>Web designer and front-end developer</Text>
+          <Text>{t("Web")}</Text>
         </div>
         <div className={styles.media}>
-          <Text type="h2">Media</Text>
+          <Text type="h2">{t("Media")}</Text>
           <div className={styles.social}>
             <BsGithub className={styles.icon} />
             <BsDiscord className={styles.icon} />

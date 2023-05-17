@@ -2,12 +2,16 @@ import { FC } from "react";
 import styles from "./AllMedia.module.scss";
 import { Text } from "../../../shared";
 import { BsDiscord, BsGithub } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 export const AllMedia: FC = (): JSX.Element => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.all_media}>
       <Text type="h1">
-        <span>#</span>all-media
+        <span>#</span>
+        {t("all-media")}
       </Text>
       <div className={styles.social}>
         <Text>
