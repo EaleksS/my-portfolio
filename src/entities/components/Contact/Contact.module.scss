@@ -1,0 +1,15 @@
+@import "/src/app/styles/variables";
+
+.contact {
+  border: 1px solid $gray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

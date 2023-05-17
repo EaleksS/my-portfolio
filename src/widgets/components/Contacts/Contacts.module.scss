@@ -7,19 +7,10 @@
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
-  }
 
-  .contact {
-    border: 1px solid $gray;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    p {
+    .right {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
     }
   }
 }

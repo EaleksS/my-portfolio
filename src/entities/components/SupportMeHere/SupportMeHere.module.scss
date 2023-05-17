@@ -1,0 +1,10 @@
+@import "/src/app/styles/variables";
+
+.support_me_here {
+  border: 1px solid $gray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 3rem;
+}

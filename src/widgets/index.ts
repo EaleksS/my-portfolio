@@ -7,6 +7,8 @@ import { AboutMe } from "./components/AboutMe/AboutMe";
 import { Contacts } from "./components/Contacts/Contacts";
 import { CompleteApps } from "./components/CompleteApps/CompleteApps";
 import { SmallProjects } from "./components/SmallProjects/SmallProjects";
+import { MyFunFacts } from "./components/MyFunFacts/MyFunFacts";
+import { AllMedia } from "./components/AllMedia/AllMedia";
 
 export {
   Layout,
@@ -18,4 +20,6 @@ export {
   Contacts,
   CompleteApps,
   SmallProjects,
+  MyFunFacts,
+  AllMedia,
 };
