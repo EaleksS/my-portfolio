@@ -10,7 +10,7 @@ export const Card: FC<Project> = (props): JSX.Element => {
       <img src={props.img} alt="project" />
       <div className={styles.content}>
         <div className={styles.stack}>
-          <Text>{props.stack.map((e) => e)}</Text>
+          <Text>{props.stack.join(" ")}</Text>
         </div>
         <div className={styles.info}>
           <Text type="h2">{props.name}</Text>
