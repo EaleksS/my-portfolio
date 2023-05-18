@@ -1,27 +1,29 @@
 import { FC } from "react";
 import styles from "./Card.module.scss";
 import { Button, Text } from "../../../shared";
+import { Project } from "../../interface/projects.interface";
+import { Link } from "react-router-dom";
 
-interface Props {
-  img?: string;
-}
-
-export const Card: FC<Props> = (): JSX.Element => {
+export const Card: FC<Project> = (props): JSX.Element => {
   return (
     <div className={styles.card}>
-      <img src="/item1.jpg" alt="project" />
+      <img src={props.img} alt="project" />
       <div className={styles.content}>
         <div className={styles.stack}>
-          <Text>HTML SCSS Python Flask HTML SCSS Python Flask</Text>
+          <Text>{props.stack.map((e) => e)}</Text>
         </div>
         <div className={styles.info}>
-          <Text type="h2">ChertNodes</Text>
-          <Text mt="1rem">
-            Figma landing page about service for viewing chess tournaments
-          </Text>
+          <Text type="h2">{props.name}</Text>
+          <Text mt="1rem">{props.desc}</Text>
           <div className={styles.btns}>
-            <Button type="primary">Live {`<~>`}</Button>
-            <Button>Github {`<~>`}</Button>
+            {props.live && (
+              <Link to={props.live} target="_blank">
+                <Button type="primary">Live {`<~>`}</Button>
+              </Link>
+            )}
+            <Link to={props.github} target="_blank">
+              <Button>Github {`<~>`}</Button>
+            </Link>
           </div>
         </div>
       </div>

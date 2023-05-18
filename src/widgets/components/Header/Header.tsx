@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import styles from "./Header.module.scss";
 import { useNavigate } from "react-router-dom";
 import { Nav } from "../../../entities";
@@ -8,8 +8,19 @@ export const Header: FC = (): JSX.Element => {
   const navigate = useNavigate();
   const { isActive, setIsActive } = useBurgerMenu();
 
+  // Плавный переход
+  const sectionRef = useRef<HTMLDivElement>(null);
+  function scrollToMyElement() {
+    sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  useEffect(() => {
+    scrollToMyElement();
+  }, []);
+  // /Плавный переход
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={sectionRef}>
       <div className={styles.logo} onClick={() => navigate("/")}>
         <img src="/Logo.svg" alt="logo" />
         <h2>Ernest</h2>

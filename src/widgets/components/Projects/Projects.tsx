@@ -4,10 +4,12 @@ import { Text } from "../../../shared";
 import { Card } from "../../../entities";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { useProjects } from "../../store/projects.store";
 
 export const Projects: FC = (): JSX.Element => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { projects } = useProjects();
 
   return (
     <div className={styles.projects}>
@@ -23,8 +25,8 @@ export const Projects: FC = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.items}>
-        {[0, 1, 2].map((e) => (
-          <Card key={e} />
+        {projects.map((e) => (
+          <Card key={e.id} {...e} />
         ))}
       </div>
     </div>
