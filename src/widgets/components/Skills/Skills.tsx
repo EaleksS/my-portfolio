@@ -20,23 +20,14 @@ export const Skills: FC<Props> = ({ type = 1 }): JSX.Element => {
             {t("skills")}
           </Text>
           <div className={styles.block}>
-            <Skill
-              title={t("Languages")}
-              desc="TypeScript Lua Python JavaScript"
-            />
-            <Skill
-              title={t("Databases")}
-              desc="TypeScript Lua Python JavaScript"
-            />
+            <Skill title={t("Languages")} desc="TypeScript NodeJs JavaScript" />
+            <Skill title={t("Databases")} desc="SQLite PostgreSQL Mongo" />
             <Skill
               title={t("Tools")}
-              desc="TypeScript Lua Python JavaScript TypeScript Lua Python JavaScript TypeScript Lua Python JavaScript"
+              desc="VSCode Linux Figma Git Font Awesome"
             />
-            <Skill title={t("Other")} desc="TypeScript Lua Python JavaScript" />
-            <Skill
-              title={t("Frameworks")}
-              desc="TypeScript Lua Python JavaScript"
-            />
+            <Skill title={t("Other")} desc="HTML CSS SCSS REST JSX TSX" />
+            <Skill title={t("Frameworks")} desc="React NextJs NestJs" />
           </div>
         </div>
       );
@@ -71,10 +62,7 @@ export const Skills: FC<Props> = ({ type = 1 }): JSX.Element => {
                   title={t("Tools")}
                   desc="VSCode Linux Figma Git Font Awesome"
                 />
-                <Skill
-                  title={t("Frameworks")}
-                  desc="React NextJs NestJs"
-                />
+                <Skill title={t("Frameworks")} desc="React NextJs NestJs" />
               </div>
             </div>
           </div>
