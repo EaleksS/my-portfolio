@@ -25,9 +25,7 @@ export const Projects: FC = (): JSX.Element => {
         </div>
       </div>
       <div className={styles.items}>
-        {projects.map((e) => (
-          <Card key={e.id} {...e} />
-        ))}
+        {projects.map((e, index) => index < 3 && <Card key={e.id} {...e} />)}
       </div>
     </div>
   );
