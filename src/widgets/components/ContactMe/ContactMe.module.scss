@@ -1,0 +1,31 @@
+@import "/src/app/styles/variables";
+
+.contact_me {
+  width: 570px;
+  background: $bg-color;
+  padding: 2rem;
+  border: 1px solid $gray;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  button {
+    width: 150px;
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-2px);
+}

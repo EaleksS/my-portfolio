@@ -16,3 +16,8 @@
 
   scroll-behavior: smooth;
 }
+
+input,
+button {
+  font-family: "Fira Code", monospace;
+}

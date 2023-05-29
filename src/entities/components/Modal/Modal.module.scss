@@ -25,11 +25,7 @@
   }
 
   .content {
-    padding: 1rem;
-    background: $bg-color;
-
     transform: translateX(-100vw);
-
     transition: all 0.2s ease-in-out;
 
     &.active {
