@@ -10,6 +10,7 @@ import { Modal } from "../../../entities";
 import styles from "./ContactMe.module.scss";
 import { Button, Input, Loader, useWindowDimensions } from "../../../shared";
 import emailjs from "@emailjs/browser";
+import { IoClose } from "react-icons/io5";
 
 interface Props {
   isActive: boolean;
@@ -93,6 +94,9 @@ export const ContactMe: FC<Props> = ({
         className={styles.contact_me}
         onSubmit={(e) => e.preventDefault()}
       >
+        <div className={styles.close}>
+          <IoClose onClick={() => setIsActive(false)} />
+        </div>
         <div className={styles.user}>
           <Input
             placholder="Name"
