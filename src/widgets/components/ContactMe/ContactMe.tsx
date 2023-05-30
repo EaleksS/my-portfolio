@@ -1,7 +1,14 @@
-import { Dispatch, FC, SetStateAction, useRef, useState } from "react";
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Modal } from "../../../entities";
 import styles from "./ContactMe.module.scss";
-import { Button, Input, Loader } from "../../../shared";
+import { Button, Input, Loader, useWindowDimensions } from "../../../shared";
 import emailjs from "@emailjs/browser";
 
 interface Props {
@@ -13,6 +20,16 @@ export const ContactMe: FC<Props> = ({
   setIsActive,
   isActive,
 }): JSX.Element => {
+  const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    if (isActive && width < 601) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [isActive, width]);
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [valueName, setValueName] = useState<string>("");
