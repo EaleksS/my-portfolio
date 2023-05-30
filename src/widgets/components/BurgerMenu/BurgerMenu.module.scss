@@ -1,3 +1,5 @@
+@import "/src/app/styles/variables";
+
 .burger_menu {
   width: 100vw;
   height: 100vh;
@@ -5,6 +7,7 @@
   align-items: center;
   //   justify-content: center;
   padding-left: 10rem;
+  background: $bg-color;
 
   ul {
     flex-direction: column;
